@@ -16,8 +16,8 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 
-	float myCalculation = 12.0f / 5.0f + 10.0f - 3.5f;
-	UE_LOG(LogTemp, Display, TEXT("My calculation is %f"), myCalculation);
+	UE_LOG(LogTemp, Display, TEXT("Member Float is %f"), memberFloat);
+	UE_LOG(LogTemp, Display, TEXT("Member Int is %d"), memberInt);
 
 }
 
