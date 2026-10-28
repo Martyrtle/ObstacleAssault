@@ -30,6 +30,6 @@ public:
 	int memberInt = 3;
 
 	UPROPERTY(EditAnywhere)
-	FVector memberVector = FVector(850.0f, -80.0f, 160.0f);
+	FVector memberVector = FVector(850.0f, -80.0f, 60.0f);
 
 };

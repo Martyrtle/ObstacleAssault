@@ -15,8 +15,6 @@ AMovingPlatform::AMovingPlatform()
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	SetActorLocation(memberVector);
 
 }
 
@@ -24,6 +22,9 @@ void AMovingPlatform::BeginPlay()
 void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	memberVector.X = memberVector.X + 1;
+	SetActorLocation(memberVector);
 
 }
 
