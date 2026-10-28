@@ -16,9 +16,14 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 
-	UE_LOG(LogTemp, Display, TEXT("MovingPlatform BeginPlay"));
-	
-	bool isMoving = false;
+	int myInt = 33;
+	UE_LOG(LogTemp, Display, TEXT("My Int: %d"), myInt);
+
+	float myFloat = 3.14f;
+	UE_LOG(LogTemp, Display, TEXT("My float is %f"), myFloat);
+
+	FString myString = "Custom String";
+	UE_LOG(LogTemp, Display, TEXT("My string is %s"), *myString);
 
 }
 
