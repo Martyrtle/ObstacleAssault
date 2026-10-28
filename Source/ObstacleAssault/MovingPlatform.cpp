@@ -15,9 +15,8 @@ AMovingPlatform::AMovingPlatform()
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
-
-	FVector testVector = FVector(3.14f, 2.72f, 1.62f);
-	testVector.Z = -2.5f;
+	
+	SetActorLocation(memberVector);
 
 }
 
