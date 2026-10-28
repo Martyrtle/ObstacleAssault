@@ -16,14 +16,16 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 
-	int myInt = 33;
-	UE_LOG(LogTemp, Display, TEXT("My Int: %d"), myInt);
+	int myValue = -3;
+	int myOtherValue = -5;
 
-	float myFloat = 3.14f;
-	UE_LOG(LogTemp, Display, TEXT("My float is %f"), myFloat);
+	int myResult = myValue * myOtherValue;
 
-	FString myString = "Custom String";
-	UE_LOG(LogTemp, Display, TEXT("My string is %s"), *myString);
+	UE_LOG(LogTemp, Display, TEXT("My result is %d"), myResult);
+
+	float myCalculation = 12.0f / 5.0f;
+
+	UE_LOG(LogTemp, Display, TEXT("My calculation is %f"), myCalculation);
 
 }
 
