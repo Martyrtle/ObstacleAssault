@@ -16,8 +16,8 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 
-	UE_LOG(LogTemp, Display, TEXT("Member Float is %f"), memberFloat);
-	UE_LOG(LogTemp, Display, TEXT("Member Int is %d"), memberInt);
+	FVector testVector = FVector(3.14f, 2.72f, 1.62f);
+	testVector.Z = -2.5f;
 
 }
 
