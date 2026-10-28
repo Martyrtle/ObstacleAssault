@@ -16,15 +16,7 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 
-	int myValue = -3;
-	int myOtherValue = -5;
-
-	int myResult = myValue * myOtherValue;
-
-	UE_LOG(LogTemp, Display, TEXT("My result is %d"), myResult);
-
-	float myCalculation = 12.0f / 5.0f;
-
+	float myCalculation = 12.0f / 5.0f + 10.0f - 3.5f;
 	UE_LOG(LogTemp, Display, TEXT("My calculation is %f"), myCalculation);
 
 }
