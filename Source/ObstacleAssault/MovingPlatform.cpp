@@ -61,6 +61,8 @@ void AMovingPlatform::RotatePlatform(float DeltaTime)
 {
 	// Rotates the platform independantly from frame rate
 
+	AddActorLocalRotation(rotationVelocity * DeltaTime);
+
 }
 
 float AMovingPlatform::GetDistanceMoved()
