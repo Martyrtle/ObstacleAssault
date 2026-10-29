@@ -33,4 +33,9 @@ public:
 	UPROPERTY(EditAnywhere)
 	FVector platformRotation = FVector(0.0f, 0.0f, 0.0f);
 
+	UPROPERTY(VisibleAnywhere)
+	float distanceFromStart = 0.0f;
+
+	FVector startLocation;
+
 };
