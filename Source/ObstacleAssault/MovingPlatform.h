@@ -23,13 +23,4 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(EditAnywhere)
-	float memberFloat = 3.14f;
-
-	UPROPERTY(VisibleAnywhere)
-	int memberInt = 3;
-
-	UPROPERTY(EditAnywhere)
-	FVector memberVector = FVector(850.0f, -80.0f, 60.0f);
-
 };
