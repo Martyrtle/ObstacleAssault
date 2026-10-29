@@ -23,6 +23,7 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	// Increment X position by 1 each frame
 	memberVector.X = memberVector.X + 1;
 	SetActorLocation(memberVector);
 
