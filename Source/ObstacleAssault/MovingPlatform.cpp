@@ -35,11 +35,24 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	MovePlatform(DeltaTime);
+	RotatePlatform(DeltaTime);
+
+}
+
+void AMovingPlatform::MovePlatform(float DeltaTime)
+{
 	FVector currentLocation = GetActorLocation();
 
 	currentLocation = currentLocation + (platformVelocity * DeltaTime);
 
 	SetActorLocation(currentLocation);
+
+}
+
+void AMovingPlatform::RotatePlatform(float DeltaTime)
+{
+	// Rotates the platform independantly from frame rate
 
 }
 
