@@ -11,10 +11,18 @@ AMovingPlatform::AMovingPlatform()
 
 }
 
+// A test function
+void MyTestFunction()
+{
+	UE_LOG(LogTemp, Display, TEXT("My Test Function was called!"));
+}
+
 // Called when the game starts or when spawned
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
+
+	MyTestFunction();
 
 }
 
@@ -23,7 +31,6 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	// Increment X position by 1 each frame
 	FVector currentLocation = GetActorLocation();
 
 	currentLocation = currentLocation + (platformVelocity * DeltaTime);
