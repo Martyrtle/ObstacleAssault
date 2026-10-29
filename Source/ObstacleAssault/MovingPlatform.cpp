@@ -34,7 +34,7 @@ void AMovingPlatform::MovePlatform(float DeltaTime)
 {
 	FVector currentLocation = GetActorLocation();
 
-	currentLocation = currentLocation + (platformVelocity * DeltaTime);
+	currentLocation = currentLocation + platformVelocity * DeltaTime;
 
 	SetActorLocation(currentLocation);
 
@@ -45,8 +45,12 @@ void AMovingPlatform::MovePlatform(float DeltaTime)
 		float overshoot = distanceFromStart - moveDistance;
 		UE_LOG(LogTemp, Display, TEXT("%s overshot by %f"), *GetName(), overshoot);
 
+		FVector moveDirection = platformVelocity.GetSafeNormal();
+		FVector newStartLocation = startLocation + moveDirection * moveDistance;
+		SetActorLocation(newStartLocation);
+		startLocation = newStartLocation;
+
 		platformVelocity = -platformVelocity;
-		startLocation = currentLocation;
 	}
 
 }
