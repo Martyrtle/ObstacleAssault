@@ -27,6 +27,8 @@ public:
 
 	void RotatePlatform(float DeltaTime);
 
+	float GetDistanceMoved();
+
 	UPROPERTY(EditAnywhere)
 	FVector platformVelocity = FVector(0.0f, 0.0f, 0.0f);
 
